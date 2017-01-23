@@ -139,24 +139,24 @@ else if($dopost=='save')
     }
 
     //生成HTML
-    UpIndexKey($id, $arcrank, $typeid, $sortrank, '');
-    if($cfg_remote_site=='Y' && $isremote=="1")
-    {    
-        if($serviterm!="")
-        {
-            list($servurl, $servuser, $servpwd) = explode(',', $serviterm);
-            $config = array( 'hostname' => $servurl, 'username' => $servuser, 
-                                      'password' => $servpwd,'debug' => 'TRUE');
-        } else {
-            $config = array();
-        }
-        if(!$ftp->connect($config)) exit('Error:None FTP Connection!');
-    }
+    // UpIndexKey($id, $arcrank, $typeid, $sortrank, '');
+    // if($cfg_remote_site=='Y' && $isremote=="1")
+    // {    
+    //     if($serviterm!="")
+    //     {
+    //         list($servurl, $servuser, $servpwd) = explode(',', $serviterm);
+    //         $config = array( 'hostname' => $servurl, 'username' => $servuser, 
+    //                                   'password' => $servpwd,'debug' => 'TRUE');
+    //     } else {
+    //         $config = array();
+    //     }
+    //     if(!$ftp->connect($config)) exit('Error:None FTP Connection!');
+    // }
 
-    $artUrl = MakeArt($id, TRUE, TRUE, $isremote);
-    if($artUrl=='') $artUrl = $cfg_phpurl."/view.php?aid=$id";
+    // $artUrl = MakeArt($id, TRUE, TRUE, $isremote);
+    // if($artUrl=='') $artUrl = $cfg_phpurl."/view.php?aid=$id";
 
-    ClearMyAddon($id, $title);
+    // ClearMyAddon($id, $title);
     //返回成功信息
     $msg = "
     　　请选择你的后续操作：
